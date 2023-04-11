@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+        <variable
+            name="data"
+            type="com.example.datanews.ListData" />
+
+    </data>
+
+    <androidx.cardview.widget.CardView
+        android:backgroundTint="@color/teal_700"
+        android:id="@+id/lisData"
+        app:cardMaxElevation="5dp"
+        app:cardCornerRadius="15dp"
+        android:layout_margin="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+        <RelativeLayout
+            android:layout_margin="20dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+
+            <TextView
+                android:id="@+id/tvJudul"
+                android:text="@{data.name}"
+                android:textColor="@color/white"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:id="@+id/tvTanggal"
+                android:layout_marginTop="10dp"
+                android:layout_below="@+id/tvJudul"
+                android:text="@{data.tanggal}"
+                android:textColor="@color/white"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:id="@+id/tvPenulis"
+                android:layout_marginTop="10dp"
+                android:layout_below="@+id/tvTanggal"
+                android:text="@{data.penulis}"
+                android:textColor="@color/white"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:id="@+id/tvDeskripsi"
+                android:layout_marginTop="10dp"
+                android:layout_below="@+id/tvPenulis"
+                android:text="@{data.deskripsi}"
+                android:textColor="@color/white"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <ImageView
+                android:id="@+id/imgData"
+                app:imageResource="@{data.img}"
+                android:layout_alignParentRight="true"
+                android:layout_width="100dp"
+                android:layout_height="100dp" />
+
+        </RelativeLayout>
+
+
+    </androidx.cardview.widget.CardView>
+</layout>
